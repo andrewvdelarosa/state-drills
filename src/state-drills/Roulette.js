@@ -16,19 +16,18 @@ export default class Roulette extends React.Component {
     }
 
     handleRouletteSpin = () => {
-        console.log(click)
+        console.log('click')
         this.setState({spinningTheChamber: true})
         this.timeout = setTimeout(() => {
-            const bullet = Math.ceil(Math.random() * 8)
+            const randomBullet = Math.ceil(Math.random() * 8)
 
-            this.setStat({ 
-                chamber: bullet,
+            this.setState({ 
+                chamber: randomBullet,
                 spinningTheChamber: false,
             })
         }, 2000)
-
     }
-    
+
     displayResults() {
         const {spinningTheChamber, chamber} = this.state
         const { bullet } = this.props
