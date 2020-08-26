@@ -15,21 +15,14 @@ export default class Bomb extends React.Component {
 
     renderDisplay() {
         const {count} = this.state;
-        
-        if(count % 2 === 0) {
-                return (
-                    <div>Tick</div> 
-                )
-            }
-        else if(!count % 2 === 0)
-            return (
-                <div>Tock</div>
-            )
-        else if(count >= 8) {
+        if(count >= 8) {
             clearInterval(this.interval)
-            return (
-                <div>Boom!</div>
-            )
+            return 'Boom'
+        }
+        else if(count % 2 === 0) {
+            return 'Tick'
+        } else {
+            return 'Tock'
         }
     }
 
