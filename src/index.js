@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import HelloWorld from './state-drills/helloworld'
+import HelloWorld from './state-drills/Helloworld'
 // import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render( <
-    React.StrictMode >
-    <
-    HelloWorld / >
-    <
-    /React.StrictMode>,
+ReactDOM.render( 
+    <React.StrictMode>
+    
+    <HelloWorld />
+    </React.StrictMode>,
     document.getElementById('root')
 );
 
