@@ -1,7 +1,7 @@
 import React from 'react';
 // import { ReactComponent } from '*.svg';
 
-export default class HelloWorld extends React.Component {
+export default class Helloworld extends React.Component {
     state = {
         greeting: "Test"
     }
