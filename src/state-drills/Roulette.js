@@ -39,9 +39,6 @@ export default class Roulette extends React.Component {
             return 'you\'re safe you lucky bastard'
         }
     }
-
-
-
     render() {
         return (
             <div className="Roulette">

@@ -22,13 +22,18 @@ export default class Accordian extends React.Component {
     }
 
      handleClick = (sectionIdx) => {
-            this.setState({ sectionIndex: sectionIdx })
+        this.setState({ sectionIndex: sectionIdx })
       }
 
       displayResults(section, idx, sectionIndex) {
          return (
                 <li key={idx} className="item">
-                    <button type="button" onClick={this.handleClick(idx)}>{section.title}</button>
+                    <button 
+                    type="button" 
+                    onClick={() => this.handleClick(idx)}
+                    >
+                        {section.title}
+                    </button>
                     {(sectionIndex === idx) && <p>{section.content}</p>}
                 </li>
             )
@@ -36,18 +41,15 @@ export default class Accordian extends React.Component {
     
 
       render() {
-          const {sectionIndex} = this.state;
-          const {sections} = this.props;
+          const { sectionIndex } = this.state
+          const { sections } = this.props
           return (
-          <div className="Results">
               <ul className="Accordian">
-                  {sections.map((section, idx) => {
+                  {sections.map((section, idx) => 
                      this.displayResults(section, idx, sectionIndex)
-                    })
+                    )
                 }
               </ul>
-          </div>
-          )}
-
-
+          )
+        }
 }
