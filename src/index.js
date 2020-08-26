@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 // import Bomb from './state-drills/Bomb'
-import Roulette from './state-drills/Roulette'
+// import Roulette from './state-drills/Roulette'
 // import * as serviceWorker from './serviceWorker';
+import Accordian from './state-drills/Accordian'
 
 ReactDOM.render( 
     <React.StrictMode>
     
-    <Roulette />
+    <Accordian />
     </React.StrictMode>,
     document.getElementById('root')
 );
