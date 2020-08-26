@@ -15,6 +15,5 @@ export default class HelloWorld extends React.Component {
                 <button onClick = {() => this.setState({ greeting: "React" }) }>React</button> 
                 </div>
         )}
-    
-
 };
+
